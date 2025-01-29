@@ -10,6 +10,7 @@
                 <a href="#section1"> Go to Section 1 </a>
                 <a href="aboutMe.html">About Me</a>
                 <a href="http://www.espn.com" target="_blank">ESPN</a>
+                <img src="img/c2e4e015-b036-4856-8db7-40d861858395.jpg" width="100px" />
             </nav>
         </header>
         <main>
@@ -28,11 +29,52 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>Data 1</td>
+                    <td bgcolor="yellow" align="left" width="100em">Data 1</td>
                     <td>Data 2</td>
                 </tr>
-            </tbodp>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th>Some bold text</th>
+                    <th>Some normal text</th>
+                </tr>
+            </tfoot>
+            <caption>Here is some important information</caption>
         </table>
+        <section id="table2">
+            <table border="5">
+                <tbody>
+                    <tr>
+                        <td>
+                            <table border="2">
+                                <tbody>
+                                    <tr>
+                                        <td>Table in a table</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><p>A non table cell</p></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <br/>
+        <section id="form1">
+            <form method="POST">
+                <!-- This is going to try to post something to my current url
+                 but I have no post route so everything breaks-->
+                <lobel for="name">Name:</lobel>
+                <input type="text" id="name" name="name">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password">
+                <label for="multiline">Response:</label>
+                <input for="multiline" name="multiline">
+                <button type="submit">Submit</button>
+            </form>
+        </section>
         </main>
     </body>
 </html>
