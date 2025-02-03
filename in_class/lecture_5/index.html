@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lecture 5: CSS</title>
+        <link rel="stylesheet" type="text/css" href="css/global.css">
+        <style>
+            .aBox {
+                height: 50px;
+                width: 50px;
+                background-color: blue;
+                transition: width 0.5s ease, background-color 1s ease;
+            }
+            .aBox:hover {
+                width: 150px;
+                background-color: yellowgreen;
+            }
+            .bBox {
+                height: 100px;
+                width: 100px;
+                background-color: red;
+            }
+            .containerFlexBox {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                /* space-around tries to 'center' items in a given area */
+                /* space-between pushes items far away from each other*/
+                align-items: center;
+            }
+            .containerGrid {
+                display: grid; /* this is building a 2-dim grid */
+                grid-template-columns: repeat(3, 1fr); /* this is stating i want 5 columns of equal width */
+                grid-gap: 10px; /* this adds some space between the columns */
+            }
+        </style>
+    </head>
+    <body>
+        <h1 style="color:lightblue; background-color: lightcoral; text-align: center; margin-left: 25%; margin-right: 25%; margin-bottom: 5%;">CSS TIME! </h1>
+        <div class="containerFlexBox">
+            <div class = "aBox"></div>
+            <div class = "aBox"></div>
+            <div class = "bBox"></div>
+            <div class = "aBox"></div>
+        </div>
+        <section>
+            <p>So this is a paragraph with purple text.
+                A span allows you to modify a small section within an HTML element. For example this text is going to be <span style="color:black;">black</span></p>
+            <p> This should be purple as well.</p>
+        </section>
+        <section style="color: crimson">
+            <div class="containerGrid">
+                <p> Col 1</p>
+                <p> Col 2</p>
+                <p> Col 3</p>
+                <p> Col 4</p>
+                <p> Col 5</p>
+                <p> Col 6</p>
+            </div>
+        </section>
+
+    </body>
+</html>
