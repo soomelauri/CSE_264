@@ -105,3 +105,62 @@ console.log(people[0].name)
 // for looping through the people array to get the names of each person
 people.forEach(person => console.log(person.name))
 // since people is an array of objects, we can use push, pop, shift and unshift all on the object array
+people.forEach(person => console.log(person.zip))
+
+// on to functions
+
+function greet() {
+    console.log('Hello from Greet')
+}
+greet()
+
+function greet2(name) {
+    console.log(`Hello, ${name}!`)
+}
+
+greet2('Lauri')
+greet2('Tim')
+greet2('Tom')
+
+function add(a,b) {
+    return a + b
+}
+console.log(add(2,3))
+console.log(add('5', 6))
+
+
+// would be nice if this add function only did onne thing, and that is add two numbers together
+function addNumbers(a,b) {
+    if (typeof a !== 'number' || typeof b !== 'number') {
+        return 'Please provide numbers'
+    }
+    return a + b
+}
+
+console.log(addNumbers(5, 10))
+console.log(addNumbers('5', 10))
+console.log(addNumbers(5, '10'))
+
+const arrowMinus = (a,b) => {
+    return a - b
+}
+
+console.log(arrowMinus(5, 100))
+
+
+const divide = (a,b) => a/b
+console.log(divide(10, 2))
+
+// special type called a callback function
+function greetUser(callback) {
+    console.log("Hello user")
+    callback() // calls the callback
+}
+
+function displayTime() {
+    console.log(`The time is ${ new Date().toLocaleDateString()}`)
+}
+
+displayTime()
+
+greetUser(displayTime)
