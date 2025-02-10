@@ -54,3 +54,54 @@ fruits.shift() // removes the first element
 console.log(fruits)
 fruits.unshift('apple')
 console.log(fruits)
+
+
+// arrays are 0 indexed so this gets up the fruit in teh 2nd position
+console.log(fruits[1])
+
+console.log(fruits.findIndex(el => el === 'banana'))
+
+// trad for-loop
+for(let i = 0; i <fruits.length; i++) {
+    console.log(fruits[i])
+}
+
+// current way to for-loop
+// for each is function that allows to call another function looping through each element
+// el is each fruit in my array and i just pass the el into the console.log function
+fruits.forEach(el => console.log(el))
+
+// objects 
+let person = {
+    name: "Tom",
+    age: 25,
+    city: "New York",   
+}
+
+console.log(person)
+
+console.log(person.zip)
+person.age = 29
+console.log(person)
+
+for(let key in person) {
+    console.log(`${key}: ${person[key]}`)
+}
+
+
+let person2 = {
+    name: "Scott",
+    age: 35,
+    city: "Philadelphia",
+}
+
+// people is now an array of objects (JSON)
+let people = [person, person2]
+
+console.log(people)
+
+console.log(people[0].name)
+
+// for looping through the people array to get the names of each person
+people.forEach(person => console.log(person.name))
+// since people is an array of objects, we can use push, pop, shift and unshift all on the object array
